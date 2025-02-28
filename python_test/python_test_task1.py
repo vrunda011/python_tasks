@@ -34,7 +34,7 @@ sale_data = [
 ]
 
 df = pd.DataFrame(data=sale_data)
-
+df["SubTotal"] = df["price"]*df["quantity"]
 # It converts list of dictionary data into Excel sheet.
 df.to_excel("sale_data.xlsx", index=False)
 print("Dictionary converted into excel...")
